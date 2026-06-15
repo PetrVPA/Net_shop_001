@@ -1,4 +1,4 @@
-from src.category import Category
+
 
 
 class Product:
@@ -7,15 +7,32 @@ class Product:
     '''
     name: str
     description: str
-    price: float
+    __price: float
     quantity: int
 
-    def __init__(self, name: object, description: object, price: object, quantity: object) -> None:
+    def __init__(self, name: str, description: str, price: str, quantity: str) -> None:
         """
         Функция инициализации объекта класса Product
         :rtype: None
         """
         self.name = name
         self.description = description
-        self.price = price
+        self.__price = price
         self.quantity = quantity
+
+    @classmethod
+    def new_product(cls, checklist: dict) -> object:# Задание №3
+        return cls(checklist["name"], checklist["description"], checklist["price"], checklist["quantity"])
+
+
+    @property
+    def price(self) -> float:
+        return self.__price
+
+    @price.setter
+    def price(self, input_price: float) -> None:
+        if input_price > 0:
+            self.__price = input_price
+        else:
+            print ('Цена не может быть равна нулю или меньше.')
+
