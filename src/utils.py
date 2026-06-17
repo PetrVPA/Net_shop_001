@@ -4,14 +4,15 @@ import logging
 from src.product import Product
 from src.category import Category
 
-file_path = os.path.join(r'..\data\tests_file.log')
+file_path = os.path.join(r'..\data\utils.log')
 log_path = os.path.abspath(file_path)
-utils_log = logging.getLogger('test_category')
+utils_log = logging.getLogger('utils')
 file_utils_log = logging.FileHandler(log_path, encoding='utf-8')
 utils_log.addHandler(file_utils_log)
 file_utils_log_formater = logging.Formatter('%(asctime)s - %(name)s - %(funcName)s - %(levelname)s - %(message)s')
 file_utils_log.setFormatter(file_utils_log_formater)
 utils_log.setLevel(logging.DEBUG)
+
 
 def download_file(path: str) -> dict:
     '''
@@ -25,7 +26,7 @@ def download_file(path: str) -> dict:
     return answer_data
 
 
-def create_category_from_json(data: list(dict))-> object:
+def create_category_from_json(data: list(dict)) -> list(object):
     '''
     Функция для создания объектов Category и Product
     :param data: Список словарей для формирования объектов класса Category и Product

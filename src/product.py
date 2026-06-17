@@ -1,6 +1,4 @@
 
-
-
 class Product:
     '''
     Класс для формирования объекта товар
@@ -21,9 +19,8 @@ class Product:
         self.quantity = quantity
 
     @classmethod
-    def new_product(cls, checklist: dict) -> object:# Задание №3
+    def new_product(cls, checklist: dict) -> object:  # Задание №3
         return cls(checklist["name"], checklist["description"], checklist["price"], checklist["quantity"])
-
 
     @property
     def price(self) -> float:
@@ -34,4 +31,4 @@ class Product:
         if input_price > 0:
             self.__price = input_price
         else:
-            print ('Цена не может быть равна нулю или меньше.')
+            print('Цена не может быть равна нулю или меньше.')
