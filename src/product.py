@@ -7,7 +7,7 @@ class Product:
     '''
     name: str
     description: str
-    __price: float
+    price: float
     quantity: int
 
     def __init__(self, name: str, description: str, price: str, quantity: str) -> None:
@@ -35,4 +35,3 @@ class Product:
             self.__price = input_price
         else:
             print ('Цена не может быть равна нулю или меньше.')
-

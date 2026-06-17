@@ -1,5 +1,3 @@
-from src.product import Product
-from typing import Type
 
 
 class Category:
@@ -8,7 +6,7 @@ class Category:
     '''
     name: str
     description: str
-    __products: list
+    products: list
 
 
     category_count = 0
@@ -25,11 +23,6 @@ class Category:
         Category.category_count = Category.category_count + 1
         Category.product_count = Category.product_count + 1
 
-    # @classmethod
-    # def add_product(cls, product: Type[Product]) -> None:# Задание №1
-    #     if isinstance(product, Product):
-    #         cls.__products.append(product)
-
 
     def add_product(self, product: object) -> None:  # Задание №1
         self.__products.append(product)
@@ -45,3 +38,11 @@ class Category:
             quantity = prod.quantity
             top.append(f'{name}, {price} руб. остаток: {quantity} шт.')
         return top
+
+    # @property
+    # def products(self) -> list:  # Задание №2
+    #     der = []
+    #     product = self.__products
+    #     for top in product:
+    #         der.append(top.name)
+    #     return der
