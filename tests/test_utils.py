@@ -51,10 +51,10 @@ def test_download_file():
 
 def test_create_category_from_json():
     answer = create_category_from_json(data_test)
-    assert answer[0].products[0] == 'Samsung Galaxy C23 Ultra, 180000.0 руб. остаток: 5 шт.'
+    assert answer[0].products[0] == 'Samsung Galaxy C23 Ultra, 180000.0 руб. остаток: 5 шт.\n'
     assert answer[0].products == ['Samsung Galaxy C23 Ultra,'
-                                  ' 180000.0 руб. остаток: 5 шт.', 'Iphone 15, 210000.0 руб. остаток: 8 шт.',
-                                  'Xiaomi Redmi Note 11, 31000.0 руб. остаток: 14 шт.']
-    assert answer[1].products[0] == '55" QLED 4K, 123000.0 руб. остаток: 7 шт.'
+                                  ' 180000.0 руб. остаток: 5 шт.\n', 'Iphone 15, 210000.0 руб. остаток: 8 шт.\n',
+                                  'Xiaomi Redmi Note 11, 31000.0 руб. остаток: 14 шт.\n']
+    assert answer[1].products[0] == '55" QLED 4K, 123000.0 руб. остаток: 7 шт.\n'
     assert answer[1].description == ("Современный телевизор, который позволяет наслаждаться просмотром,"
                                      " станет вашим другом и помощником")

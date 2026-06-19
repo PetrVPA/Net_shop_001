@@ -22,4 +22,4 @@ def test_categ_add_product():
     rokets.add_product(rest)
     object_r60 = rokets.products[0]
     utils_log.debug(f'Делай ноль - проверка name object_r60  = {object_r60}')
-    assert object_r60 == 'Ракета Р-60, 98000.0 руб. остаток: 212 шт.'
+    assert object_r60 == 'Ракета Р-60, 98000.0 руб. остаток: 212 шт.\n'

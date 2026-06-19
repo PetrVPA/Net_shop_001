@@ -30,5 +30,5 @@ class Category:
             name = prod.name
             price = prod.price
             quantity = prod.quantity
-            top.append(f'{name}, {price} руб. остаток: {quantity} шт.')
+            top.append(f'{name}, {price} руб. остаток: {quantity} шт.\n')
         return top
