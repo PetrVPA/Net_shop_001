@@ -5,24 +5,24 @@ from src.category import Category
 
 @pytest.fixture
 def first_product():
-    return Product(name='Ракета Х55', description='Ракета воздух-поверхность', price=1256000.00, quantity=26)
+    return Product('Ракета Х55', 'Ракета воздух-поверхность', 1256000.00, 26)
 
 
 @pytest.fixture
 def second_product():
-    return Product(name='Ракета Р-73Э', description='Ракета воздух-воздух', price=117000.00, quantity=112)
+    return Product('Ракета Р-73Э', 'Ракета воздух-воздух', 117000.00, 112)
 
 
 @pytest.fixture
 def third_product():
-    return Product(name='Ракета Р-60', description='Ракета воздух-воздух', price=98000.00, quantity=212)
+    return Product('Ракета Р-60', 'Ракета воздух-воздух', 98000.00, 212)
 
 
 @pytest.fixture
 def first_category():
-    return Category(name='Ракеты', description='Ракета воздух-воздух', products=['second_product', 'third_product'])
+    return Category('Ракеты', 'Ракета воздух-воздух', [second_product, third_product])
 
 
 @pytest.fixture
 def second_category():
-    return Category(name='Ракеты', description='Ракета воздух-поверхность', products=['first_product'])
+    return Category('Ракеты', 'Ракета воздух-поверхность', [first_product])
