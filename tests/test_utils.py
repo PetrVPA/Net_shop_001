@@ -1,5 +1,6 @@
 from src.utils import create_category_from_json
 from src.utils import download_file
+import os.path
 
 data_test = [
   {
@@ -45,7 +46,8 @@ data_test = [
 
 
 def test_download_file():
-    raw_data = download_file(r"C:\Users\Nochtcha\PycharmProjects\Net_shop_001\data\products.json")
+    file_path = os.path.join(r'..\data\products.json')
+    raw_data = download_file(file_path)
     assert raw_data == data_test
 
 
