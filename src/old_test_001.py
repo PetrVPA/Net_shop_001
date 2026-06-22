@@ -1,8 +1,4 @@
-import pytest
 from src.product import Product
-from src.category import Category
-
-
 
 
 if __name__ == "__main__":
@@ -12,5 +8,3 @@ if __name__ == "__main__":
 
     print(f"Стоимость единицы: {product3.price} рублей.")
     print(f"Можем поствить: {product3.quantity} штук.")
-
-
