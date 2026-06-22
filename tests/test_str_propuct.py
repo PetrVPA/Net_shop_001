@@ -9,5 +9,3 @@ def test_str_propuct2(second_product):
 
 def test_str_propuct3(third_product):
     assert str(third_product) == 'Ракета Р-60, 98000.0 руб. Остаток: 212 шт.'
-
-
