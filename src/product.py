@@ -18,6 +18,14 @@ class Product:
         self.__price = price
         self.quantity = quantity
 
+
+    def __str__(self):
+        return fr'{self.name}, {self.__price} руб. Остаток: {self.quantity}'
+
+
+    def __add__(self, other: object) -> int:
+        return (self.__price*self.quantity)+(other.__price*other.quantity)
+
     @classmethod
     def new_product(cls, checklist: dict) -> object:  # Задание №3
         return cls(checklist["name"], checklist["description"], checklist["price"], checklist["quantity"])
