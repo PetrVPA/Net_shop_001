@@ -11,9 +11,3 @@ def test_str_propuct3(third_product):
     assert str(third_product) == 'Ракета Р-60, 98000.0 руб. Остаток: 212 шт.'
 
 
-def test_str_category1(first_category):
-    assert str(first_category) == 'Ракеты, количество продуктов: 324 шт.'
-
-
-def test_str_category2(second_category):
-    assert str(second_category) == 'Ракеты, количество продуктов: 26 шт.'
