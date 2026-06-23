@@ -307,3 +307,11 @@
 2026-06-22 23:05:06,545 - test_categ_add_product - test_categ_add_product - DEBUG - Делай ноль - проверка объекта rest.name  = Ракета Р-60
 2026-06-22 23:05:06,545 - test_categ_add_product - test_categ_add_product - DEBUG - Делай ноль - проверка name object_r60  = Ракета Р-60, 98000.0 руб. остаток: 212 шт.
 
+2026-06-23 09:12:14,815 - test_categ_add_product - test_categ_add_product - DEBUG - Делай ноль - проверка объекта rokets.name  = Ракеты
+2026-06-23 09:12:14,819 - test_categ_add_product - test_categ_add_product - DEBUG - Делай ноль - проверка объекта rest.name  = Ракета Р-60
+2026-06-23 09:12:14,819 - test_categ_add_product - test_categ_add_product - DEBUG - Делай ноль - проверка name object_r60  = Ракета Р-60, 98000.0 руб. остаток: 212 шт.
+
+2026-06-23 09:27:08,783 - test_categ_add_product - test_categ_add_product - DEBUG - Делай ноль - проверка объекта rokets.name  = Ракеты
+2026-06-23 09:27:08,787 - test_categ_add_product - test_categ_add_product - DEBUG - Делай ноль - проверка объекта rest.name  = Ракета Р-60
+2026-06-23 09:27:08,787 - test_categ_add_product - test_categ_add_product - DEBUG - Делай ноль - проверка name object_r60  = Ракета Р-60, 98000.0 руб. остаток: 212 шт.
+
