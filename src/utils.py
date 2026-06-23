@@ -26,13 +26,13 @@ def download_file(path: str) -> dict:
     return answer_data
 
 
-def create_category_from_json(data: list(dict)) -> list(object):
+def create_category_from_json(data: list[dict]) -> list[object]:
     '''
     Функция для создания объектов Category и Product
     :param data: Список словарей для формирования объектов класса Category и Product
     :return: возвращает объекты Category и Product
     '''
-    fin = []
+    result = []
     for red in data:
         products = []
         for green in red['products']:
@@ -41,8 +41,8 @@ def create_category_from_json(data: list(dict)) -> list(object):
             utils_log.debug(f'Делай один - products = {products}')
             red['products'] = products
             utils_log.debug(f'Делай два - red = {red}')
-            categor = Category(**red)
-        fin.append(categor)
-        utils_log.debug(f'Делай три - fin = {fin}')
-    utils_log.debug(f'Делай четыре - fin = {fin}')
-    return fin
+            current_category = Category(**red)
+        result.append(current_category)
+        utils_log.debug(f'Делай три - fin = {result}')
+    utils_log.debug(f'Делай четыре - fin = {result}')
+    return result

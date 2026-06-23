@@ -31,10 +31,10 @@ class Category:
     @property
     def products(self) -> list:  # Задание №2
         product = self.__products
-        top = []
+        remains = []
         for prod in product:
             name = prod.name
             price = prod.price
             quantity = prod.quantity
-            top.append(f'{name}, {price} руб. остаток: {quantity} шт.\n')
-        return top
+            remains.append(f'{name}, {price} руб. остаток: {quantity} шт.\n')
+        return remains
