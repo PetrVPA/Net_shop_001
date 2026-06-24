@@ -22,7 +22,7 @@ class Product:
         return fr'{self.name}, {self.__price} руб. Остаток: {self.quantity} шт.'
 
     def __add__(self, other: object) -> int:
-        return (self.__price*self.quantity)+(other.__price*other.quantity)
+        return (self.__price * self.quantity) + (other.__price * other.quantity)
 
     @classmethod
     def new_product(cls, checklist: dict) -> object:  # Задание №3
@@ -45,8 +45,9 @@ class Smartphone(Product):
     model: str
     memory: int
     color: str
-    def __init__(self, name: str, description: str,  price: float, quantity: int, efficiency: float, model: str,
-                 memory: int, color: str) -> None:
+
+    def __init__(self, name: str, description: str,  price: float, quantity: int, efficiency: float,
+                 model: str, memory: int, color: str) -> None:
         super().__init__(name, description, price, quantity)
         self.efficiency = efficiency
         self.model = model
@@ -55,15 +56,15 @@ class Smartphone(Product):
 
     def __add__(self, other: object) -> int:
         if type(other) is Smartphone:
-            return (self._Product__price*self.quantity)+(other._Product__price*other.quantity)
+            return (self._Product__price * self.quantity) + (other._Product__price * other.quantity)
         raise TypeError
-
 
 
 class LawnGrass(Product):
     country: str
     germination_period: float
     color: str
+
     def __init__(self, name: str, description: str, price: float, quantity: int, country: str,
                  germination_period: float, color: str) -> None:
         super().__init__(name, description, price, quantity)
@@ -73,5 +74,5 @@ class LawnGrass(Product):
 
     def __add__(self, other: object) -> int:
         if type(other) is LawnGrass:
-            return (self._Product__price*self.quantity)+(other._Product__price*other.quantity)
+            return (self._Product__price * self.quantity) + (other._Product__price * other.quantity)
         raise TypeError
