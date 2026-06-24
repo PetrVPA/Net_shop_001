@@ -8,7 +8,7 @@ class Product:
     price: float
     quantity: int
 
-    def __init__(self, name: str, description: str, price: str, quantity: str) -> None:
+    def __init__(self, name: str, description: str, price: float, quantity: int) -> None:
         """
         Функция инициализации объекта класса Product
         :rtype: None
@@ -38,3 +38,40 @@ class Product:
             self.__price = input_price
         else:
             print('Цена не может быть равна нулю или меньше.')
+
+
+class Smartphone(Product):
+    efficiency: float
+    model: str
+    memory: int
+    color: str
+    def __init__(self, name: str, description: str,  price: float, quantity: int, efficiency: float, model: str,
+                 memory: int, color: str) -> None:
+        super().__init__(name, description, price, quantity)
+        self.efficiency = efficiency
+        self.model = model
+        self.memory = memory
+        self.color = color
+
+    def __add__(self, other: object) -> int:
+        if type(other) is Smartphone:
+            return (self._Product__price*self.quantity)+(other._Product__price*other.quantity)
+        raise TypeError
+
+
+
+class LawnGrass(Product):
+    country: str
+    germination_period: float
+    color: str
+    def __init__(self, name: str, description: str, price: float, quantity: int, country: str,
+                 germination_period: float, color: str) -> None:
+        super().__init__(name, description, price, quantity)
+        self.country = country
+        self.germination_period = germination_period
+        self.color = color
+
+    def __add__(self, other: object) -> int:
+        if type(other) is LawnGrass:
+            return (self._Product__price*self.quantity)+(other._Product__price*other.quantity)
+        raise TypeError
