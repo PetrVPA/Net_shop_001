@@ -46,3 +46,17 @@ class Category:
             Category.product_count = Category.product_count + 1
         else:
             raise TypeError
+
+    def middle_price(self) -> float:
+        sum_price = 0
+        for prod in self.__products:
+            sum_price = sum_price + prod.price
+        try:
+            result = sum_price / len(self.__products)
+        except ZeroDivisionError:
+            print("Количество продуктов в категории равна нулю.")
+            return 0
+        else:
+            answer_str = "{:.2f}".format(result)
+            answer_float = float(answer_str)
+            return answer_float
